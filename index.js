@@ -15,11 +15,11 @@
     const ffmpeg = require('fluent-ffmpeg');
     const nodemailer = require("nodemailer");
     const transporter = nodemailer.createTransport({
-        host: 'mail.ugcstocks.com',
+        host: process.env.UGCWEBMAILHOST,
         port: 587,
         auth: {
-            user: 'support@ugcstocks.com',
-            pass: 'ep6!@u38v'
+            user: process.env.UGCEMAILUSER,
+            pass: process.env.UGCEMAILPASS
         }
     });  
     
